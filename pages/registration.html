@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<!--=== Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="../scss/regis.css">
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!--<title>Responsive Regisration Form </title>--> 
+</head>
+<body>
+    <div class="container">
+        <header>Registrasi Keanggotaan</header>
+
+        <form action="#">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Personal Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Nama Lengkap</label>
+                            <input type="text" placeholder="Masukkan Nama Lengkap" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Tanggal Lahir</label>
+                            <input type="date" placeholder="Masukkan Tanggal Lahir" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Email</label>
+                            <input type="text" placeholder="Masukkan Email" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Nomor Handphone</label>
+                            <input type="number" placeholder="Masukkan Nomor HP" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Gender</label>
+                            <select required>
+                                <option disabled selected>Select gender</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Agama</label>
+                            <input type="text" placeholder="Agama" required>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="details ID">
+                    <span class="title">Identitas Mahasiswa</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Nomor Induk Mahasiswa</label>
+                            <input type="number" placeholder="Masukkan NIM" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Fakultas</label>
+                            <input type="text" placeholder="Masukkan Fakultas" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Program Studi</label>
+                            <input type="text" placeholder="Masukkan Program Studi" required>
+                        </div>
+                        
+                        <div class="input-field">
+                            <label>Kelas</label>
+                            <select required>
+                                <option disabled selected>Pilih Kelas</option>
+                                <option>Reguler</option>
+                                <option>Karyawan</option>
+                            </select>
+                        </div>
+                        
+                        <div class="input-field">
+                            <label>Jenjang</label>
+                            <select required>
+                                <option disabled selected>Pilih Jenjang</option>
+                                <option>S1</option>
+                                <option>S2</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Semester</label>
+                            <input type="number" placeholder="Masukkan Semester" required>
+                        </div>
+
+                        
+                    </div>
+
+                    <button class="nextBtn">
+                        <span class="btnText">Next</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                </div> 
+            </div>
+
+            <div class="form second">
+                <div class="details address">
+                    <span class="title">Address Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Alamat Asal</label>
+                            <input type="text" placeholder="(Sesuai KTP)" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Alamat Tempat Tinggal</label>
+                            <input type="text" placeholder="Masukkan Alamat Sekarang" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Provinsi</label>
+                            <input type="text" placeholder="Masukkan Provinsi" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Nama Kota/Kabupaten</label>
+                            <input type="text" placeholder="Enter Nama Kota/Kabupaten" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Nama Jalan</label>
+                            <input type="text" placeholder="Masukkan Nama Jalan" required>
+                        </div>
+
+                    
+                    </div>
+                </div>
+
+                <div class="details family">
+                    <span class="title">Pemilihan Divisi</span>
+
+                    <div class="fields">
+
+                        <div class="input-field">
+                            <label>Divisi</label>
+                            <select required>
+                                <option disabled selected>Pilih Divisi yang anda inginkan</option>
+                                <option>IT Security</option>
+                                <option>Software</option>
+                                <option>MultiMedia</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="buttons">
+                        <div class="backBtn">
+                            <i class="uil uil-navigator"></i>
+                            <span class="btnText">Back</span>
+                        </div>
+                        
+                        <button class="sumbit">
+                            <span class="btnText">Submit</span>
+                            <i class="uil uil-navigator"></i>
+                        </button>
+                    </div>
+                </div> 
+            </div>
+        </form>
+    </div>
+
+    <script src="../js/regis.js"></script>
+
+    <!--<script src="script.js"></script>-->
+</body>
+</html>
