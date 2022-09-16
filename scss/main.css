@@ -14,6 +14,38 @@ body {
   height: 100vh;
 }
 
+.top {
+  width: 100%;
+  background: #000;
+}
+.top .navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.top .navbar nav {
+  flex: 1;
+  text-align: right;
+}
+.top .navbar nav ul {
+  margin: 0;
+  padding: 0;
+}
+.top .navbar nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 30px;
+}
+.top .navbar nav ul li a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 600;
+}
+.top .navbar .navbar .menu-icon {
+  display: none;
+}
+
 .basenglah {
   background: #000;
 }
@@ -130,7 +162,11 @@ body {
   margin-top: 32px;
   padding: 0 150px;
 }
-.landing_page .btn-gabung {
+.landing_page .link-gabung {
+  margin-top: 34px;
+}
+.landing_page .link-gabung .btn-gabung {
+  margin-top: 42px;
   position: relative;
   padding: 20px 26px;
   background: #1832fe;
@@ -139,64 +175,9 @@ body {
   font-weight: 700;
   font-size: 16px;
   border-radius: 10px;
-  margin-top: 36px;
 }
-.landing_page .btn-gabung:hover {
+.landing_page .link-gabung .btn-gabung:hover {
   background: #1328c7;
-}
-
-nav {
-  display: flex;
-  height: 80px;
-  width: 100%;
-  align-items: center;
-  justify-content: space-between;
-  padding: 25px 100px 0 100px;
-  flex-wrap: wrap;
-}
-
-nav .logo {
-  color: #fff;
-  font-size: 35px;
-  font-weight: 600;
-}
-
-nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-}
-
-nav ul li {
-  margin: 0 5px;
-}
-
-nav ul li a {
-  color: #f2f2f2;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 500;
-  padding: 8px 15px;
-  border-radius: 5px;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
-}
-
-nav ul li a.active,
-nav ul li a:hover {
-  color: #111;
-  background: #fff;
-}
-
-nav .menu-btn i {
-  color: #fff;
-  font-size: 22px;
-  cursor: pointer;
-  display: none;
-}
-
-input[type=checkbox] {
-  display: none;
 }
 
 section.two {
@@ -211,61 +192,46 @@ section.two .AboutUs .row {
   align-items: center;
 }
 section.two .AboutUs .row h1 {
-  font-size: 72px;
-  font-weight: bold;
+  font-size: 42px;
+  font-weight: 600;
   color: #1832fe;
 }
 section.two .AboutUs .row p {
-  font-size: 16px;
-  font-weight: 500;
-  color: #c4c4c4;
-  padding-top: 38px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #8f8f8f;
+  padding-top: 24px;
+}
+section.two .AboutUs .row .link-galeri {
+  margin-top: 34px;
+}
+section.two .AboutUs .row .link-galeri a {
+  border: 1px solid #1328c7;
+  border-radius: 10px;
+  padding: 12px 24px;
+  text-decoration: none;
+  color: #1328c7;
+}
+section.two .AboutUs .row .gambar {
+  position: relative;
+}
+section.two .AboutUs .row .gambar img {
+  width: 100%;
 }
 
 @media (max-width: 1000px) {
-  nav {
-    padding: 0 40px 0 50px;
+  .navbar .menu-icon {
+    display: none;
   }
 }
 @media (max-width: 920px) {
-  nav .menu-btn i {
-    display: block;
+  .navbar .menu-icon {
+    display: none;
   }
-  #click:checked ~ .menu-btn i:before {
-    content: "\f00d";
-  }
-  nav ul {
-    position: fixed;
-    top: 80px;
-    left: -100%;
-    background: #111;
-    height: 100vh;
-    width: 100%;
-    text-align: center;
-    display: block;
-    transition: all 0.3s ease;
-  }
-  #click:checked ~ ul {
-    left: 0;
-  }
-  nav ul li {
-    width: 100%;
-    margin: 40px 0;
-  }
-  nav ul li a {
-    width: 100%;
-    margin-left: -100%;
-    display: block;
-    font-size: 20px;
-    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-  #click:checked ~ ul li a {
-    margin-left: 0px;
-  }
-  nav ul li a.active,
-nav ul li a:hover {
-    background: none;
-    color: cyan;
+}
+@media (min-width: 992px) {
+  .navbar .menu-icon {
+    display: none;
   }
 }
 @media (max-width: 991px) {
@@ -279,12 +245,40 @@ nav ul li a:hover {
     font-size: 14px;
     padding: 0;
   }
-}
-@media (max-width: 768px) {
-  section.two .AboutUs .gambar {
+  .landing_page .gambar {
     position: relative;
+    padding-top: 40px;
   }
-  section.two .AboutUs img {
+  .landing_page .gambar img {
     width: 100%;
+  }
+  .navbar .menu-icon {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .navbar ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: linear-gradient(#1328c7, #1832fe);
+    position: absolute;
+    top: 100px;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    border-radius: 20px;
+  }
+  .navbar ul li {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .navbar ul li a {
+    color: #000;
+  }
+  .navbar .menu-icon {
+    display: block;
   }
 }/*# sourceMappingURL=main.css.map */
